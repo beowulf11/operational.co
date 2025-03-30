@@ -14,6 +14,9 @@ services:
     environment:
       - DATABASE_URL=mysql://root:${MYSQL_ROOT_PASSWORD}@mysql:3306/${MYSQL_DATABASE} # MySQL connection string
       - APP_URL=${APP_URL}
+      - VAPID_EMAIL=${VAPID_EMAIL}
+      - VAPID_PUBLIC_KEY=${VAPID_PUBLIC_KEY}
+      - VAPID_PRIVATE_KEY=${VAPID_PRIVATE_KEY}
       - SECRET=${SECRET}
       - CORS=*
       - NODE_ENV=production

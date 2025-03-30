@@ -1,5 +1,8 @@
 FROM node:20 AS build
 
+ARG VITE_API_URL
+ARG VITE_APP_URL
+
 WORKDIR /monorepo
 COPY ./package.json .
 COPY ./package-lock.json .

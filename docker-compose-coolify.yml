@@ -16,7 +16,7 @@ services:
         DATABASE_URL: mysql://root:${MYSQL_ROOT_PASSWORD}@mysql:3306/${MYSQL_DATABASE}
     environment:
       - DATABASE_URL=mysql://root:${MYSQL_ROOT_PASSWORD}@mysql:3306/${MYSQL_DATABASE} # MySQL connection string
-      - APP_URL="http://localhost"
+      - APP_URL=${APP_URL}
       - CORS=*
       - NODE_ENV=production
     depends_on:

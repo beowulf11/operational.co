@@ -30,7 +30,7 @@ services:
       --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_ROOT_PASSWORD: r{MYSQL_ROOT_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
     volumes:
       - ./data/conf.d:/etc/mysql/conf.d
       - ./data/logs:/logs

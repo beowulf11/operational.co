@@ -14,6 +14,7 @@ services:
     environment:
       - DATABASE_URL=mysql://root:${MYSQL_ROOT_PASSWORD}@mysql:3306/${MYSQL_DATABASE} # MySQL connection string
       - APP_URL=${APP_URL}
+      - SECRET=${SECRET}
       - CORS=*
       - NODE_ENV=production
     depends_on:

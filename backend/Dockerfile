@@ -29,4 +29,4 @@ RUN curl -o /usr/local/bin/wait-for-it https://raw.githubusercontent.com/vishnub
 EXPOSE 2000
 
 # Set entrypoint that generates a SECRET and starts the app
-ENTRYPOINT ["sh", "-c", "export SECRET=$(openssl rand -base64 32) && npx prisma migrate deploy && npx prisma generate && npm start"]
+ENTRYPOINT ["sh", "-c", "npx prisma migrate deploy && npx prisma generate && npm start"]
